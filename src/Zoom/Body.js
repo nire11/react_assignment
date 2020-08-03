@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Grid, Typography, Button, Container, CardContent } from '@material-ui/core';
+import { makeStyles, Grid, Typography, Button, Container, CardContent, Card } from '@material-ui/core';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import EditIcon from '@material-ui/icons/Edit';
 import ClearIcon from '@material-ui/icons/Clear';
@@ -18,6 +18,9 @@ const useStyles = makeStyles({
     root: {
         marginRight: '20px',
     },
+    card: {
+        marginTop: '15px',
+    },
 });
 
 export default function Body() {
@@ -32,7 +35,7 @@ export default function Body() {
                             <RefreshIcon />
                         </Grid>
                         <Grid item xs={6}>
-                            <ButtonGroup color="primary" aria-label="contained primary button group">
+                            <ButtonGroup color="gray" aria-label="contained primary button group">
                                 <Button>Upcomming</Button>
                                 <Button disabled>Recorded</Button>
                             </ButtonGroup>
@@ -49,33 +52,39 @@ export default function Body() {
                     </Typography>
                     <Divider variant="middle" />
                     <Container maxWidth='md'>
-                        <Typography variant='subtitle1' align='left' style={{paddingTop: '30px', paddingLeft: '30px'}}>
+                        <Typography variant='subtitle1' color='textSecondary' align='left' style={{paddingTop: '30px', paddingLeft: '30px'}}>
                             Recurring Meeting
                         </Typography>
-                        <CardContent align='left' style={{paddingLeft: '30px'}}>
-                            <Typography variant='h6' style={{fontSize: '1.15rem'}}>
-                                RAC-KNE PPs | General Member Meeting
-                            </Typography>
-                            <Typography variant='subtitle1'>
-                                Meeting ID: 410 913 70125
-                            </Typography>
-                        </CardContent>
-                        <CardContent align='left' style={{paddingLeft: '30px', backgroundColor: '#3578E5', borderRadius: '5%'}}>
-                            <Typography variant='h6' style={{fontSize: '1.15rem'}}>
-                                React JS Course
-                            </Typography>
-                            <Typography variant='subtitle1'>
-                                Meeting ID: 410 913 70125
-                            </Typography>
-                        </CardContent>
-                        <CardContent align='left' style={{paddingLeft: '30px'}}>
-                            <Typography variant='h6' style={{fontSize: '1.15rem'}}>
-                                Session on Effective Communication with Maria Creison
-                            </Typography>
-                            <Typography variant='subtitle1'>
-                                Meeting ID: 410 913 70125
-                            </Typography>
-                        </CardContent>
+                        <Card className={classes.card}>
+                            <CardContent align='left' style={{paddingLeft: '30px'}}>
+                                <Typography variant='h6' style={{fontSize: '1.15rem'}}>
+                                    RAC-KNE PPs | General Member Meeting
+                                </Typography>
+                                <Typography variant='subtitle1'>
+                                    Meeting ID: 410 913 70125
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                        <Card className={classes.card}>
+                            <CardContent align='left' style={{paddingLeft: '30px', backgroundColor: '#3578E5'}}>
+                                <Typography variant='h6' style={{fontSize: '1.15rem'}}>
+                                    React JS Course
+                                </Typography>
+                                <Typography variant='subtitle1'>
+                                    Meeting ID: 410 913 70125
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                        <Card className={classes.card}>
+                            <CardContent align='left' style={{paddingLeft: '30px'}}>
+                                <Typography variant='h6' style={{fontSize: '1.15rem'}}>
+                                    Session on Effective Communication with Maria Creison
+                                </Typography>
+                                <Typography variant='subtitle1'>
+                                    Meeting ID: 410 913 70125
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </Container>
                 </Grid>
                 <Divider orientation="vertical" flexItem />

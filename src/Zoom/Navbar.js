@@ -75,27 +75,25 @@ export default function Navbar () {
         <div>
             <AppBar position="static" color="default">
                 <Toolbar>
-                    <Grid xs={12} sm={8}>
-                        <HomeOutlinedIcon style={{paddingRight: '30px', fontSize: '40px'}}/>
-                        <ChatBubbleOutlineIcon style={{paddingRight: '30px', fontSize: '40px'}}/>
-                        <ScheduleIcon color="primary" style={{paddingRight: '30px', fontSize: '40px'}}/>
-                        <AccountBoxOutlinedIcon style={{fontSize: '40px'}}/>
-                    </Grid>
-                    <Grid xs={12} sm={4}>
-                        <div className={classes.search}>
-                            <div className={classes.searchIcon}>
-                            <SearchIcon />
-                            </div>
-                            <InputBase
-                            placeholder="Search…"
-                            classes={{
-                                root: classes.inputRoot,
-                                input: classes.inputInput,
-                            }}
-                            inputProps={{ 'aria-label': 'search' }}
-                            />
-                        </div>
-                    </Grid>
+                  <div className={classes.root}>
+                    <HomeOutlinedIcon style={{paddingRight: '5.5rem', fontSize: '40px'}}/>
+                    <ChatBubbleOutlineIcon style={{paddingRight: '5.5rem', fontSize: '40px'}}/>
+                    <ScheduleIcon color="primary" style={{paddingRight: '5.5rem', fontSize: '40px'}}/>
+                    <AccountBoxOutlinedIcon style={{fontSize: '40px'}}/>
+                  </div>
+                  <div className={classes.search}>
+                      <div className={classes.searchIcon}>
+                      <SearchIcon />
+                      </div>
+                      <InputBase
+                      placeholder="Search…"
+                      classes={{
+                          root: classes.inputRoot,
+                          input: classes.inputInput,
+                      }}
+                      inputProps={{ 'aria-label': 'search' }}
+                      />
+                  </div>
                 </Toolbar>
             </AppBar>
         </div>
